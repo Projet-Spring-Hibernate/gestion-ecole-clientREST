@@ -24,14 +24,14 @@ public class ClientWsRestGestionCours {
 	
 	
 	// ===========================================================//
-	// =========== Liste ALL Courss ===========================//
+	// =========== Liste ALL Cours ===========================//
 	// ===========================================================//
 	
 	/**
-	 * Recupere la liste des courss  à partir du web service rest 
+	 * Recupere la liste des cours  à partir du web service rest 
 	 * @return
 	 */
-	public List<Cours> getAllCourss(){
+	public List<Cours> getAllCours(){
 		
 		webTarget=clientWs.target(WS_BASE_URL).path("get-all");
 		

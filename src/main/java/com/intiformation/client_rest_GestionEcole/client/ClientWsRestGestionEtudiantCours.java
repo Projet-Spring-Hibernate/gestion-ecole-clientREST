@@ -24,11 +24,19 @@ public class ClientWsRestGestionEtudiantCours {
 	
 	
 	// ===========================================================//
+
 	// =========== Liste ALL Etudiantcours ===========================//
 	// ===========================================================//
 	
 	/**
 	 * Recupere la liste des etudiantcours  à partir du web service rest 
+=======
+	// =========== Liste ALL EtudiantCours ===========================//
+	// ===========================================================//
+	
+	/**
+	 * Recupere la liste des etudiantCours  à partir du web service rest 
+>>>>>>> 9c29f64e49e754fb9cb9dacca94914a13d7b714a
 	 * @return
 	 */
 	public List<EtudiantCours> getAllEtudiantCours(){
