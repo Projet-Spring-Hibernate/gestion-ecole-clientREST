@@ -1,0 +1,16 @@
+com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionEtudiant$1.class
+com\intiformation\client_rest_GestionEcole\modele\Exercice.class
+com\intiformation\client_rest_GestionEcole\modele\Aide.class
+com\intiformation\client_rest_GestionEcole\controller\EtudiantController.class
+com\intiformation\client_rest_GestionEcole\modele\Personne.class
+com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionEtudiant$2.class
+com\intiformation\client_rest_GestionEcole\modele\Matiere.class
+com\intiformation\client_rest_GestionEcole\modele\Adresse.class
+com\intiformation\client_rest_GestionEcole\modele\Enseignant.class
+com\intiformation\client_rest_GestionEcole\modele\EtudiantCours.class
+com\intiformation\client_rest_GestionEcole\modele\Etudiant.class
+com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionEtudiant.class
+com\intiformation\client_rest_GestionEcole\modele\EnseignantMatierePromotion.class
+com\intiformation\client_rest_GestionEcole\modele\Promotion.class
+com\intiformation\client_rest_GestionEcole\modele\Cours.class
+com\intiformation\client_rest_GestionEcole\modele\Administrateur.class
