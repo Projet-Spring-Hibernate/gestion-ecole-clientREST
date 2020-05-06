@@ -36,17 +36,11 @@ public class CoursController {
 	@RequestMapping(value = "/cours/list-all", method = RequestMethod.GET)
 	public String recupListeAllCours(ModelMap modele) {
 		// 1. recup de la liste de tous les cours de la bdd
-<<<<<<< HEAD
-		List<Cours> listeCourss = coursService.getAllCourss();
 
-		// 2. def des données à afficher dans la vue
-		modele.addAttribute("attribut_liste_cours", listeCourss);
-=======
 		List<Cours> listeCours = coursService.getAllCours();
 
 		// 2. def des données à afficher dans la vue
 		modele.addAttribute("attribut_liste_cours", listeCours);
->>>>>>> 9c29f64e49e754fb9cb9dacca94914a13d7b714a
 
 		return "listeCours";
 	}// end recupListeAllCours
@@ -107,11 +101,7 @@ public class CoursController {
 
 		// ajout de l'cours
 		coursService.saveCours(cours);
-<<<<<<< HEAD
 
-=======
-		
->>>>>>> 9c29f64e49e754fb9cb9dacca94914a13d7b714a
 		return "redirect:/cours/list-all";
 	}// end recupListeAllCours
 
