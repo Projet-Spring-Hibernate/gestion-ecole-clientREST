@@ -157,10 +157,10 @@ public class Cours{
 	 * Attribut une matière à la propriété  matière du cours + ajoute le cours à la liste des cours de la matière
 	 * @param matiere
 	 */
-	public void addMatiere(Matiere matiere) {
-		this.matiere=matiere;
-		matiere.getListeCours().add(this);
-	}
+//	public void addMatiere(Matiere matiere) {
+//		this.matiere=matiere;
+//		matiere.getListeCours().add(this);
+//	}
 	
 	/**
 	 *  Ajoute un étudiantCours (table de jointure) à la liste des étudiantCours du cours + ajoute le cours à la propriété  cours de l'étudiantCours.

@@ -73,10 +73,7 @@ public class EnseignantMatierePromotion {
 	}
 	
 	
-	public void addMatiere(Matiere matiere) {
-		this.matiere=matiere;
-		matiere.getListeEnseignantMatierePromotion().add(this);
-	}
+	
 	
 	public void addEnseignant(Enseignant enseignant) {
 		this.enseignant=enseignant;

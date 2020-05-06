@@ -7,11 +7,18 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.GenericType;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.client.RestTemplate;
 
+import com.intiformation.client_rest_GestionEcole.modele.Adresse;
 import com.intiformation.client_rest_GestionEcole.modele.Matiere;
 
 @Repository("clientWsRestGestionMatiere")
@@ -20,6 +27,8 @@ public class ClientWsRestGestionMatiere {
 	private static final String  WS_BASE_URL="http://localhost:8080/01_gestion_ecoles/spring-rest/matiere";
 	private static Client clientWs = ClientBuilder.newClient();
 	private static WebTarget webTarget;
+	
+	RestTemplate restTemplate = new RestTemplate();
 	
 	
 	
@@ -33,10 +42,12 @@ public class ClientWsRestGestionMatiere {
 	 */
 	public List<Matiere> getAllMatieres(){
 		
-		webTarget=clientWs.target(WS_BASE_URL).path("get-all");
+	webTarget=clientWs.target(WS_BASE_URL).path("get-all");
 		
 		List<Matiere> listeMatiere= webTarget.request().get(Response.class)
 				.readEntity(new GenericType<List<Matiere>>() {});
+		
+	
 		
 		return listeMatiere;
 	}//end getAllMatiere
@@ -52,10 +63,8 @@ public class ClientWsRestGestionMatiere {
 	 */
 	public Matiere getMatiereById(Long idMatiere){
 		
-		webTarget=clientWs.target(WS_BASE_URL).path("get-by-id").path(idMatiere.toString());
-		
-		Matiere matiere= webTarget.request().get(Response.class)
-				.readEntity(new GenericType<Matiere>() {});
+		Matiere matiere = restTemplate.getForObject(WS_BASE_URL+"/get-by-id/"+idMatiere, Matiere.class);
+	
 		
 		return matiere;
 	}//end getMatiereById
@@ -67,14 +76,17 @@ public class ClientWsRestGestionMatiere {
 	 * Ajouter un matiere à la bdd à partir du web service rest 
 	 * @return
 	 */
-	public Response saveMatiere(Matiere matiere){
+	public Matiere saveMatiere(Matiere matiere){
 		System.out.println("\n==== Je suis dans saveMatiere coté client" );
-		webTarget=clientWs.target(WS_BASE_URL).path("save");
-		System.out.println(webTarget.getUri());
-		Response reponseAjout= webTarget.request(MediaType.APPLICATION_JSON).post(Entity.entity(matiere, MediaType.APPLICATION_JSON));
-		System.out.println("Status : " +reponseAjout.getStatus());
-		System.out.println("Message : " +reponseAjout.readEntity(String.class));
-		return reponseAjout;
+		
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		
+		HttpEntity<Matiere> request = new HttpEntity<>(matiere,headers);
+		
+		Matiere matiere1 = restTemplate.postForObject(WS_BASE_URL+"/save", request, Matiere.class);
+		
+		return matiere1;
 	}//end getMatiereById
 	
 	
@@ -85,13 +97,17 @@ public class ClientWsRestGestionMatiere {
 	 * Modifier un matiere à la bdd à partir du web service rest 
 	 * @return
 	 */
-	public Response updateMatiere(Matiere matiere){
+	public Matiere updateMatiere(Matiere matiere){
 		
-		webTarget=clientWs.target(WS_BASE_URL).path("update").path(matiere.getIdMatiere().toString());
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_JSON);
 		
-		Response reponseModif= webTarget.request(MediaType.APPLICATION_JSON).put(Entity.entity(matiere, MediaType.APPLICATION_JSON));
+		HttpEntity<Matiere> request = new HttpEntity<>(matiere,headers);
+
 		
-		return reponseModif;
+		Matiere matiere1 = restTemplate.postForObject(WS_BASE_URL+"/update/"+matiere.getIdMatiere(), request, Matiere.class);
+		
+		return matiere1;
 	}//end getMatiereById
 	
 	
@@ -102,12 +118,9 @@ public class ClientWsRestGestionMatiere {
 	 * Supprimer un matiere à la bdd à partir du web service rest 
 	 * @return
 	 */
-	public Response deleteMatiere(Long idMatiere){
+	public void deleteMatiere(Long idMatiere){
 		
-		webTarget=clientWs.target(WS_BASE_URL).path("delete").path(idMatiere.toString());
+	 restTemplate.delete(WS_BASE_URL+"/delete/"+idMatiere);
 		
-		Response reponseSupp= webTarget.request().delete();
-		
-		return reponseSupp;
 	}//end getMatiereById
 }//End class
