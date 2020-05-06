@@ -2,7 +2,6 @@ package com.intiformation.client_rest_GestionEcole.controller;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.intiformation.client_rest_GestionEcole.client.ClientWsRestGestionCours;
 import com.intiformation.client_rest_GestionEcole.modele.Cours;
-
 
 @Controller
 public class CoursController {
@@ -38,6 +36,7 @@ public class CoursController {
 	@RequestMapping(value = "/cours/list-all", method = RequestMethod.GET)
 	public String recupListeAllCours(ModelMap modele) {
 		// 1. recup de la liste de tous les cours de la bdd
+
 		List<Cours> listeCours = coursService.getAllCours();
 
 		// 2. def des données à afficher dans la vue
@@ -82,10 +81,10 @@ public class CoursController {
 		// > données à envoyer vers la servlet
 
 		modele.addAttribute("cours", cours);
-		
+
 		return "ajout_cours";
 	}// end recupListeAllCours
-	
+
 	// ===========================================================//
 	// =========== Ajout cours ================================//
 	// ===========================================================//
@@ -98,11 +97,45 @@ public class CoursController {
 	@RequestMapping(value = "/cours/add", method = RequestMethod.POST)
 	public String ajouterCours(@ModelAttribute("cours") Cours cours, ModelMap modele) {
 
-		System.out.println("/////"+cours);
-		
-		//ajout de l'cours
+		System.out.println("/////" + cours);
+
+		// ajout de l'cours
 		coursService.saveCours(cours);
-		
+
 		return "redirect:/cours/list-all";
 	}// end recupListeAllCours
+
+	// ===========================================================//
+	// =========== Affichage formulaire modif cours ==============//
+	// ===========================================================//
+
+	@RequestMapping(value = "/cours/update-cours-form/{pIdCours}", method = RequestMethod.GET)
+	public String formulaireModifCours(@PathVariable("pIdCours") Long pIdCours, ModelMap modele) {
+		// 1. definition de l'objet à lier au formulaire
+
+		Cours cours = coursService.getCoursById(pIdCours);
+
+		// 2. envoi de l'objet de commande à la servlet de spring mvc
+		// > données à envoyer vers la servlet
+
+		modele.addAttribute("cours", cours);
+
+		return "modif_cours";
+	}// end formulaireModifCours
+
+	// ===========================================================//
+	// ===================== modif cours =========================//
+	// ===========================================================//
+
+	@RequestMapping(value = "/cours/update", method = RequestMethod.POST)
+	public String modifierCours(@ModelAttribute("cours") Cours cours, ModelMap modele) {
+
+		System.out.println("/////" + cours);
+
+		// ajout de l'cours
+		coursService.updateCours(cours);
+
+		return "redirect:/cours/list-all";
+	}// end modifierCours
+
 }// end class

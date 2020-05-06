@@ -35,7 +35,7 @@ public class EtudiantCoursController {
 	 * @param modele
 	 * @return
 	 */
-	@RequestMapping(value = "/etudiantCours/list-all", method = RequestMethod.GET)
+	@RequestMapping(value = "/etudiantsCours/list-all", method = RequestMethod.GET)
 	public String recupListeAllEtudiantCours(ModelMap modele) {
 		// 1. recup de la liste de tous les etudiantCours de la bdd
 		List<EtudiantCours> listeEtudiantCours = etudiantCoursService.getAllEtudiantCours();
@@ -60,7 +60,7 @@ public class EtudiantCoursController {
 		// 1.Suppression
 		etudiantCoursService.deleteEtudiantCours(pIdEtudiantCours);
 
-		return "redirect:/etudiantCours/list-all";
+		return "redirect:/etudiantsCours/list-all";
 	}// end recupListeAllEtudiantCours
 
 	// ===========================================================//
@@ -103,6 +103,6 @@ public class EtudiantCoursController {
 		//ajout de l'etudiantCours
 		etudiantCoursService.saveEtudiantCours(etudiantCours);
 		
-		return "redirect:/etudiantCours/list-all";
+		return "redirect:/etudiantsCours/list-all";
 	}// end recupListeAllEtudiantCours
 }// end class
