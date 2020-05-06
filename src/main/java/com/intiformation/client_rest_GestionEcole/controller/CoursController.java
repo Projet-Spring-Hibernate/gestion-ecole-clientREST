@@ -27,23 +27,23 @@ public class CoursController {
 	}
 
 	// ===========================================================//
-	// =========== Liste All Courss ===========================//
+	// =========== Liste All Cours ===========================//
 	// ===========================================================//
 	/**
-	 * Permet d'afficher la liste de tous les courss.
+	 * Permet d'afficher la liste de tous les cours.
 	 * 
 	 * @param modele
 	 * @return
 	 */
-	@RequestMapping(value = "/courss/list-all", method = RequestMethod.GET)
+	@RequestMapping(value = "/cours/list-all", method = RequestMethod.GET)
 	public String recupListeAllCours(ModelMap modele) {
-		// 1. recup de la liste de tous les courss de la bdd
-		List<Cours> listeCourss = coursService.getAllCourss();
+		// 1. recup de la liste de tous les cours de la bdd
+		List<Cours> listeCours = coursService.getAllCours();
 
 		// 2. def des données à afficher dans la vue
-		modele.addAttribute("attribut_liste_courss", listeCourss);
+		modele.addAttribute("attribut_liste_cours", listeCours);
 
-		return "listeCourss";
+		return "listeCours";
 	}// end recupListeAllCours
 
 	// ===========================================================//
@@ -55,12 +55,12 @@ public class CoursController {
 	 * @param modele
 	 * @return
 	 */
-	@RequestMapping(value = "/courss/supprimer/{pIdCours}", method = RequestMethod.GET)
+	@RequestMapping(value = "/cours/supprimer/{pIdCours}", method = RequestMethod.GET)
 	public String supprimerCours(@PathVariable("pIdCours") Long pIdCours, ModelMap modele) {
 		// 1.Suppression
 		coursService.deleteCours(pIdCours);
 
-		return "redirect:/courss/list-all";
+		return "redirect:/cours/list-all";
 	}// end recupListeAllCours
 
 	// ===========================================================//
@@ -72,7 +72,7 @@ public class CoursController {
 	 * @param modele
 	 * @return
 	 */
-	@RequestMapping(value = "/courss/add-cours-form", method = RequestMethod.GET)
+	@RequestMapping(value = "/cours/add-cours-form", method = RequestMethod.GET)
 	public String formulaireAjoutCours(ModelMap modele) {
 		// 1. definition de l'objet à lier au formulaire
 
@@ -95,7 +95,7 @@ public class CoursController {
 	 * @param modele
 	 * @return
 	 */
-	@RequestMapping(value = "/courss/add", method = RequestMethod.POST)
+	@RequestMapping(value = "/cours/add", method = RequestMethod.POST)
 	public String ajouterCours(@ModelAttribute("cours") Cours cours, ModelMap modele) {
 
 		System.out.println("/////"+cours);
@@ -103,6 +103,6 @@ public class CoursController {
 		//ajout de l'cours
 		coursService.saveCours(cours);
 		
-		return "redirect:/courss/list-all";
+		return "redirect:/cours/list-all";
 	}// end recupListeAllCours
 }// end class
