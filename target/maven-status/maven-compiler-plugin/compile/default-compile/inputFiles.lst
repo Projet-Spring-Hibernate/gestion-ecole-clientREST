@@ -1,32 +1,32 @@
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\controller\EnseignantController.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Matiere.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Aide.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionAdresse.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\modele\EtudiantCours.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionCours.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Cours.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Personne.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionEnseignant.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\controller\MatiereController.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionAdministrateur.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\controller\AdresseController.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\modele\EnseignantMatierePromotion.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Exercice.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\controller\ExerciceController.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionExercice.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionEtudiantCours.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\controller\CoursController.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\controller\EtudiantController.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\controller\AideController.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\controller\EtudiantCoursController.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Administrateur.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\controller\AdministrateurController.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionPromotion.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Adresse.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionMatiere.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionAide.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionEtudiant.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\controller\PromotionController.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Promotion.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Enseignant.java
-C:\Users\IN-MP-018\Desktop\INTIFORMATIONS\01_COURS\14_SPRING\14_ClientWS-rest_gestion-ecole\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Etudiant.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Etudiant.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Exercice.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Promotion.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Adresse.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Personne.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\controller\AideController.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\controller\EtudiantController.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\modele\EtudiantCours.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionAide.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\controller\AdministrateurController.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\modele\EnseignantMatierePromotion.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionMatiere.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionPromotion.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionExercice.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\controller\AdresseController.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\controller\MatiereController.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionAdministrateur.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\controller\EtudiantCoursController.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionEnseignant.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\controller\CoursController.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Cours.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\controller\EnseignantController.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionEtudiant.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Aide.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Matiere.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Enseignant.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\controller\PromotionController.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionEtudiantCours.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\controller\ExerciceController.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionCours.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\modele\Administrateur.java
+C:\Users\IN-DF-019\Cours\13 Spring\TP_gestion_ecole_client-REST\src\main\java\com\intiformation\client_rest_GestionEcole\client\ClientWsRestGestionAdresse.java
