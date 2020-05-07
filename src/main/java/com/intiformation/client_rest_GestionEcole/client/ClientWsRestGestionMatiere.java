@@ -40,15 +40,26 @@ public class ClientWsRestGestionMatiere {
 	 * Recupere la liste des matieres  à partir du web service rest 
 	 * @return
 	 */
-	public List<Matiere> getAllMatieres(){
-		
-	webTarget=clientWs.target(WS_BASE_URL).path("get-all");
-		
-		List<Matiere> listeMatiere= webTarget.request().get(Response.class)
-				.readEntity(new GenericType<List<Matiere>>() {});
-		
+//	public List<Matiere> getAllMatieres(){
+//		
+//	webTarget=clientWs.target(WS_BASE_URL).path("get-all");
+//		
+//		List<Matiere> listeMatiere= webTarget.request().get(Response.class)
+//				.readEntity(new GenericType<List<Matiere>>() {});
+//		
+//	
+//		
+//		return listeMatiere;
+//	}//end getAllMatiere
 	
+	public Matiere[] getAllMatieres(){
 		
+		RestTemplate restTemplate = new RestTemplate();
+		
+		ResponseEntity<Matiere[]> response = restTemplate.getForEntity(WS_BASE_URL+"/get-all", Matiere[].class);
+		
+		Matiere[] listeMatiere = response.getBody();
+		System.out.println(listeMatiere);
 		return listeMatiere;
 	}//end getAllMatiere
 	
@@ -61,9 +72,17 @@ public class ClientWsRestGestionMatiere {
 	 * Recupere un matiere par son id à partir du web service rest 
 	 * @return
 	 */
+//	public Matiere getMatiereById(Long idMatiere){
+//		
+//		Matiere matiere = restTemplate.getForObject(WS_BASE_URL+"/get-by-id/"+idMatiere, Matiere.class);
+//	
+//		
+//		return matiere;
+//	}//end getMatiereById
+	
 	public Matiere getMatiereById(Long idMatiere){
-		
-		Matiere matiere = restTemplate.getForObject(WS_BASE_URL+"/get-by-id/"+idMatiere, Matiere.class);
+		RestTemplate restTemplate = new RestTemplate();
+		Matiere matiere = restTemplate.getForObject(WS_BASE_URL+"/get-by-id/"+idMatiere.toString(), Matiere.class);
 	
 		
 		return matiere;
@@ -76,17 +95,18 @@ public class ClientWsRestGestionMatiere {
 	 * Ajouter un matiere à la bdd à partir du web service rest 
 	 * @return
 	 */
-	public Matiere saveMatiere(Matiere matiere){
+	public void saveMatiere(Matiere matiere){
 		System.out.println("\n==== Je suis dans saveMatiere coté client" );
+		
+		RestTemplate restTemplate = new RestTemplate();
 		
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		
 		HttpEntity<Matiere> request = new HttpEntity<>(matiere,headers);
 		
-		Matiere matiere1 = restTemplate.postForObject(WS_BASE_URL+"/save", request, Matiere.class);
+		restTemplate.postForObject(WS_BASE_URL+"/save", request, Matiere.class);
 		
-		return matiere1;
 	}//end getMatiereById
 	
 	
@@ -97,7 +117,8 @@ public class ClientWsRestGestionMatiere {
 	 * Modifier un matiere à la bdd à partir du web service rest 
 	 * @return
 	 */
-	public Matiere updateMatiere(Matiere matiere){
+	public void updateMatiere(Matiere matiere){
+		RestTemplate restTemplate = new RestTemplate();
 		
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
@@ -105,9 +126,9 @@ public class ClientWsRestGestionMatiere {
 		HttpEntity<Matiere> request = new HttpEntity<>(matiere,headers);
 
 		
-		Matiere matiere1 = restTemplate.postForObject(WS_BASE_URL+"/update/"+matiere.getIdMatiere(), request, Matiere.class);
+		restTemplate.postForObject(WS_BASE_URL+"/update/"+matiere.getIdMatiere().toString(), request, Matiere.class);
 		
-		return matiere1;
+		
 	}//end getMatiereById
 	
 	

@@ -29,6 +29,8 @@
 		<!-- Version de JSTL -->
 		<jstl.version>1.2.1</jstl.version>
 		<tld.version>1.1.2</tld.version>
+		
+		<jackson.version>2.9.10.1</jackson.version>
 	</properties>
 
 
@@ -147,7 +149,11 @@
 			<artifactId>jersey-spring5</artifactId>
 			<version>${jersey2.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
 	</dependencies>
   <build>
     <finalName>14_ClientWS-rest_gestion-ecole</finalName>

@@ -38,7 +38,7 @@ public class MatiereController {
 	@RequestMapping(value = "/matieres/list-all", method = RequestMethod.GET)
 	public String recupListeAllMatiere(ModelMap modele) {
 		// 1. recup de la liste de tous les matieres de la bdd
-		List<Matiere> listeMatieres = matiereService.getAllMatieres();
+		Matiere[] listeMatieres = matiereService.getAllMatieres();
 
 		// 2. def des données à afficher dans la vue
 		modele.addAttribute("attribut_liste_matieres", listeMatieres);
