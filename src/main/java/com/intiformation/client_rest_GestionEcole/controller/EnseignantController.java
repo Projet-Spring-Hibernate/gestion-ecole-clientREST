@@ -2,6 +2,7 @@ package com.intiformation.client_rest_GestionEcole.controller;
 
 import java.util.List;
 
+import javax.ws.rs.PathParam;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -111,5 +112,55 @@ public class EnseignantController {
 		
 		return "redirect:/enseignants/list-all";
 	}// end recupListeAllEnseignant
+
+
+	// ===========================================================//
+		// =========== Affichage formulaire modif enseignant ===========//
+		// ===========================================================//
+		/**
+		 * Permet d'afficher le formulaire modif d'un enseignant.
+		 * 
+		 * @param modele
+		 * @return
+		 */
+		@RequestMapping(value = "/enseignants/update-enseignant-form/{idEnseignant}", method = RequestMethod.GET)
+		public String formulaireModifEnseignant(@PathVariable("idEnseignant") Long idEnseignant, ModelMap modele) {
+			// 1. definition de l'objet à lier au formulaire
+
+			Enseignant enseignant = enseignantService.getEnseignantById(idEnseignant);
+
+			// 2. envoi de l'objet de commande à la servlet de spring mvc
+			// > données à envoyer vers la servlet
+
+			modele.addAttribute("enseignant", enseignant);
+			
+			return "modif_enseignant";
+		}// end recupListeAllEnseignant
+		
+		// ===========================================================//
+		// =========== Modif enseignant ================================//
+		// ===========================================================//
+		/**
+		 * Permet de modifier un enseignant.
+		 * 
+		 * @param modele
+		 * @return
+		 */
+		@RequestMapping(value = "/enseignants/update", method = RequestMethod.POST)
+		public String modifierEnseignant(@ModelAttribute("enseignant") Enseignant enseignant, ModelMap modele) {
+
+			System.out.println("/////"+enseignant);
+			// objet pour le cryptage
+			BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
+			// cryptage du mdp avec la methode encode
+			String hashedMotDePasse = passwordEncoder.encode(enseignant.getMotdepasse());
+			enseignant.setMotdepasse(hashedMotDePasse);
+			
+			//ajout de l'enseignant
+			enseignantService.updateEnseignant(enseignant);
+			
+			return "redirect:/enseignants/list-all";
+		}// end recupListeAllEnseignant
 }// end class
 
