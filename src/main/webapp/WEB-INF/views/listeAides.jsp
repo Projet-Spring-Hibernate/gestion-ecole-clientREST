@@ -55,7 +55,7 @@
 
 			<c:forEach items="${attribut_liste_aides}" var="aide">
 				<tr>
-					<td>${aide.identifiant}</td>
+					<td>${aide.id_aide}</td>
 					<td>${aide.page}</td>
 					<td>${aide.contenu}</td>
 					
@@ -71,7 +71,7 @@
 
 					<!-- colonne pour la suppression de l'etudiant -->
 					<td><a
-						href="${pageContext.request.contextPath}/aides/supprimer/${aide.identifiant}">Supprimer</a></td>
+						href="${pageContext.request.contextPath}/aides/supprimer/${aide.id_aide}">Supprimer</a></td>
 
 				</tr>
 			</c:forEach>
