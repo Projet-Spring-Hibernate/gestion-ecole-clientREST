@@ -14,7 +14,7 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<!-- Version spring -->
-		<spring.versions>5.2.0.RELEASE</spring.versions>
+		<spring.versions>5.2.20.RELEASE</spring.versions>
 		<!-- Version de jsf 2 -->
 		<version.jsf2>2.2.20</version.jsf2>
 		<!-- version de l'api servlet -->
